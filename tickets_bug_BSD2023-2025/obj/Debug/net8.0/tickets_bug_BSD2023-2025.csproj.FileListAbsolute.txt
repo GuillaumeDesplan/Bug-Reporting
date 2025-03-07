@@ -262,3 +262,4 @@ C:\Users\cevig\source\repos\tickets_bug_BSD2023-2025\tickets_bug_BSD2023-2025\ob
 C:\Users\cevig\source\repos\tickets_bug_BSD2023-2025\tickets_bug_BSD2023-2025\obj\Debug\net8.0\tickets_bug_BSD2023-2025.genruntimeconfig.cache
 C:\Users\cevig\source\repos\tickets_bug_BSD2023-2025\tickets_bug_BSD2023-2025\obj\Debug\net8.0\ref\tickets_bug_BSD2023-2025.dll
 C:\Users\cevig\source\repos\tickets_bug_BSD2023-2025\tickets_bug_BSD2023-2025\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\cevig\source\repos\tickets_bug_BSD2023-2025\tickets_bug_BSD2023-2025\obj\Debug\net8.0\tickets_bug_BSD2023-2025.sourcelink.json

@@ -29,12 +29,10 @@ namespace tickets_bug_BSD2023_2025.Controllers
 
             if (!string.IsNullOrEmpty(userRole) && userRole == "Admin")
             {
-                // Pour l'admin, on affiche tous les tickets
                 ticketsQuery = _context.Ticket;
             }
             else
             {
-                // Pour un utilisateur non-admin, on affiche uniquement les tickets qui lui sont assignés
                 ticketsQuery = _context.Ticket.Where(t => t.AssignedTo == userEmail);
             }
 
@@ -189,6 +187,36 @@ namespace tickets_bug_BSD2023_2025.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        // GET: Tickets/IsResolved/5
+        public async Task<IActionResult> IsResolved(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var ticket = await _context.Ticket.FindAsync(id);
+            if (ticket == null)
+            {
+                return NotFound();
+            }
+
+            string userEmail = HttpContext.Session.GetString("SessionUserName");
+            string userRole = HttpContext.Session.GetString("SessionRole");
+
+            if (userRole != "Admin" && ticket.AssignedTo != userEmail)
+            {
+                return Unauthorized();
+            }
+
+            ticket.IsResolved = true;
+            _context.Update(ticket);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
 
         private bool TicketExists(int id)
         {

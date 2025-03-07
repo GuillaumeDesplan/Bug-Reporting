@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tickets_bug_BSD2023-2025")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1e731a3e97a409a8b26fc608b6f96f091561837")]
 [assembly: System.Reflection.AssemblyProductAttribute("tickets_bug_BSD2023-2025")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tickets_bug_BSD2023-2025")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
