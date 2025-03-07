@@ -1,0 +1,32 @@
+﻿@model tickets_bug_BSD2023_2025.Models.Home
+
+@{
+    ViewData["Title"] = "Connexion";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h2 class="text-center mb-4">Connexion</h2>
+                <form asp-action="Login">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Se connecter" class="btn btn-primary" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
